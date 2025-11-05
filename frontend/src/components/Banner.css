@@ -1,0 +1,31 @@
+.banner {
+  width: 100%;
+  background: linear-gradient(135deg, #6366f1, #3b82f6);
+  color: white;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+.banner-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.banner-message {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+  animation: slide-in 0.5s ease-out;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
