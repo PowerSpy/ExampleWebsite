@@ -10,6 +10,13 @@ function App() {
   const [darkMode, setDarkMode] = useState(false)
 
   useEffect(() => {
+    fetch('http://localhost:5050/api/ping')
+      .then(res => res.json())
+      .then(data => console.log(data.text))
+      .catch(err => console.error('server error:', err));
+  }, []);
+
+  useEffect(() => {
     document.body.className = darkMode ? 'dark' : 'light'
   }, [darkMode])
 

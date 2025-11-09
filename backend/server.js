@@ -77,6 +77,14 @@ app.delete('/api/todos/:id', (req, res) => {
   }
 });
 
+app.get('/api/ping', (req, res) => {
+  console.log('ping recieved');
+  const response = {
+    text: 'pong'
+  }
+  res.json(response);
+})
+
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
   console.log('Ready to handle requests...');
